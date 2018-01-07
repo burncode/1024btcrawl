@@ -7,17 +7,15 @@ public class PicText {
 	private String type;
 	// 名称
 	private String name;
-	// 源地址
-	private String sourceUrl;
 	// 图片地址
 	private List<String> picList;
 	// 文本内容
 	private String text;
 
-	public PicText(String picTextName, String sourceUrl, List<String> picList,
+	public PicText(String picTextName, String type, List<String> picList,
 			String text) {
 		this.name = picTextName;
-		this.sourceUrl = sourceUrl;
+		this.type = type;
 		this.picList = picList;
 		this.text = text;
 	}
@@ -38,14 +36,6 @@ public class PicText {
 		this.name = name;
 	}
 
-	public String getSourceUrl() {
-		return sourceUrl;
-	}
-
-	public void setSourceUrl(String sourceUrl) {
-		this.sourceUrl = sourceUrl;
-	}
-
 	public List<String> getPicList() {
 		return picList;
 	}
@@ -60,6 +50,12 @@ public class PicText {
 
 	public void setText(String text) {
 		this.text = text;
+	}
+
+	@Override
+	public String toString() {
+		return "PicText [type=" + type + ", name=" + name + ", picList="
+				+ picList + ", text=" + text + "]";
 	}
 
 }
